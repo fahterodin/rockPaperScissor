@@ -4,17 +4,49 @@ body {
     background-color: rgb(68, 168, 135);
 }
 
-#title, #subTitle {
+h1 {
     margin: 50px;
 }
 
-#buttons {
+.btns {
     display: flex;
-    gap: 30px;
+    gap: 140px;
     justify-content: center;
     margin: 100px;
 }
 
-#rock, #paper, #scissors {
+img {
+    width: auto;
+    height: 200px;
+}
+
+.btns>button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px;
+    color: rgb(216, 95, 15);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#result {
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#result>button {
     padding: 10px 30px;
 }
+
+
+

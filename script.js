@@ -28,6 +28,7 @@ function computerPlay() {
 const result = document.querySelector("#result");
 
 const score = document.createElement("p");
+score.style.cssText = "font-weight: bolder; font-size: xx-large";
 
 const playerCount = document.querySelector("#player");
 const cpuCount = document.querySelector("#cpu");
@@ -56,7 +57,7 @@ function playerWinRound(player, cpu) {
         score.textContent = "You win the game!";
         result.appendChild(score);
         btn.forEach(b => b.removeEventListener('click', playerPlay));
-        result.appendChild(res);
+        result.appendChild(reset);
     }
 }
 
@@ -74,57 +75,3 @@ function cpuWinRound(cpu, player) {
     }
 }
 
-
-
-
-
-
-// single round of the game
-// two parameters from player and computer that will be defined later
-// it should return a string that declares who won the round and how
-
-//  function playRound (playerSelection, computerSelection) {
-//  
-//      computerWinRound = `You lose! ${computerSelection} beats ${playerSelection}`;
-//  
-//      playerWinRound = `You win! ${playerSelection} beats ${computerSelection}`;
-//  
-//      drawRound = `Draw! You both choose ${playerSelection}`;
-//  
-//      if (playerSelection === computerSelection) {
-//          console.log(drawRound);
-//          return drawRound;
-//      } else if (playerSelection === "Rock" & computerSelection === "Scissors" || playerSelection === "Scissors" & computerSelection === "Paper" || playerSelection === "Paper" & computerSelection === "Rock") {
-//          return playerWinRound;
-//      } else return computerWinRound;    
-//  }
-
-// function that plays 5 round of the game
-// loop or call 5 times prev function
-// use console to display the result
-// get input from the player
-// helper functions?
-
-
-//function game() {
-//    let playerScore = 0;
-//    let computerScore = 0;
-//    let drawScore = 0;
-//
-//    for (let i = 1; i < 6; i++) {
-//        switch(playRound(prompt("Rock, Paper or Scissors?"), computerPlay())) {
-//            case drawRound:
-//                drawScore++;
-//                break;
-//            case playerWinRound:
-//                playerScore++;
-//                break;
-//            case computerWinRound:
-//                computerScore++;
-//                break; 
-//        }
-//    }
-//    console.log(playerScore);
-//    console.log(computerScore);
-//    console.log(drawScore);
-//}
